@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
+  @Output() option = new EventEmitter<string>();
+
+  optionOneMessage: string = "Option One!";
+  optionTwoMessage: string = "Option Two!";
 
   constructor() { }
 

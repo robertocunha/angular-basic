@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onOption($event: string): void {
+    window.alert(`You clicked ${$event}`);
+  }
 }
